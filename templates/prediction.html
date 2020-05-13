@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Face Mask Detection</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900|Oswald:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="    {{url_for('static', filename='fonts/icomoon/style.css')}}
+">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="icon"  href="{{url_for('static', filename='images/favicon.ico')}}"/>
+<metahttp-equiv = 'cache-control' content = 'no-cache'>
+<metahttp-equiv = 'expires' content = '0'>
+<metahttp-equiv = 'pragma' content = 'no-cache'>
+  <link rel="icon"  href="{{url_for('static', filename='images/favicon.ico')}}">
+
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}
+">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/magnific-popup.css')}}
+">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/jquery-ui.css')}}
+">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/owl.carousel.min.css')}}
+">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/owl.theme.default.min.css')}}
+">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap-datepicker.css')}}
+">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='fonts/flaticon/font/flaticon.css')}}
+">
+
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/aos.css')}}
+">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/fancybox.min.css')}}
+">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}
+">
+<style type="text/css">/* Style the form */
+.row1{
+  display: flex;
+    box-sizing: border-box;
+    background-color: white;
+
+}
+
+/* Create three equal columns that sits next to each other */
+.column1{
+  flex: 33.33%;
+  padding: 5px;
+    box-sizing: border-box;
+
+}
+
+#regForm {
+
+  margin: 100px auto;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+}
+
+/* Style the input fields */
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+body {
+  background: #333;
+}
+
+#dropzone {
+  position: relative;
+  border: 2px dotted #FFF;
+  color: white;
+  
+  height: 200px;
+  width: 250px;
+}
+
+#dropzone.hover {
+  border: 10px solid #FE5;
+  color: #FE5;
+}
+
+#dropzone.dropped {
+  background: #222;
+  border: 10px solid #444;
+}
+
+#dropzone div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#dropzone img {
+  border-radius: 10px;
+  vertical-align: middle;
+  max-width: 95%;
+  max-height: 95%;
+}
+
+#dropzone [type="file"] {
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #4CAF50;
+}
+</style>
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="200">
+  
+
+  <div class="site-wrap">
+
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+  <header class="header-bar d-flex d-lg-block align-items-center site-navbar-target" data-aos="fade-right">
+    <div class="site-logo">
+      <a href="index.html">Face Mask Detection</a>
+    </div>
+    
+    <div class="d-inline-block d-lg-none ml-md-0 ml-auto py-3" style="position: relative; top: 3px;"><a href="/" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+
+    <div class="main-menu">
+      <ul class="js-clone-nav">
+        <li><a href="/" class="nav-link">Home</a></li>
+        <li><a href="/#section-about" class="nav-link">About Project</a></li>
+      </ul>
+      
+    </div>
+  </header> 
+
+  <main class="main-content">
+
+    
+    <div class="container-fluid">
+        
+      
+      
+      
+      <section class="site-section" id="section-xray">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <h2 class="text-white mb-5 heading">Face Mask Detection</h2>
+
+
+             
+             <div  style="color: white">
+          <strong ><h1 id="result">{{predict}}</h1></strong>
+          <div class="column1">      
+            <h1>The Accuracy of event is {{percent}}</h1>
+</div>
+<button><a href="/#section-xray">Want To try it again</a></button>
+                         </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+
+      <div class="row justify-content-center">
+        <div class="col-md-12 text-center py-5">
+          <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</div> <!-- .site-wrap -->
+
+  <script src="{{url_for('static', filename='js/jquery-3.3.1.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/jquery-migrate-3.0.1.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/jquery.easing.1.3.js')}}"></script>
+  <script src="{{url_for('static', filename='js/jquery-ui.js')}}"></script>
+  <script src="{{url_for('static', filename='js/popper.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/owl.carousel.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/jquery.stellar.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/jquery.countdown.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/jquery.magnific-popup.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/bootstrap-datepicker.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/aos.js')}}"></script>
+  
+
+  <script src="{{url_for('static', filename='js/jquery.fancybox.min.js')}}"></script>
+
+  <script src="{{url_for('static', filename='js/main.js')}}"></script>
+    
+  </body>
+</html>
