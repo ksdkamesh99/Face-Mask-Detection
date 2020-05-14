@@ -54,17 +54,17 @@ python app.py
 ## 📜 Screenshots
 
 1. Home Page.   
-![home](https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-resize-GiMJnNablhcFM.png)
+![home](home.png)
 
 2. About Page.  
-![about](https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-resize-6qS5nfXoBOwxp97.png)
+![about](about.png)
 
 3. Predictions Page/Result Page.  
 
    i. Narendra Modi With Mask.  
-![narendra](https://www.imgonline.com.ua/result_img/imgonline-com-ua-twotoone-sFSAZYccqB6W.png)
+![narendra](modi.png)
    ii. Donald Trump without Mask.  
-![trump](https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-twotoone-PqkBawsTZ3Hso.png)
+![trump](trump.png)
 
 ## 📜 LICENSE
 
