@@ -66,6 +66,16 @@ python app.py
    ii. Donald Trump without Mask.  
 ![trump](trump.png)
 
+
+## Future Work to do:-
+1. To convert the application to asyncronous way by using ajax call.  
+2. To deploy the application in AWS/GCP Platform for beter reach.
+
+# Contact:-
+
+For any kind of suggesstions/ help in model code Please mail me at ksdkamesh99@gmail.com.
+
+
 ## 📜 LICENSE
 
 [MIT](https://github.com/ksdkamesh99/Face-Mask-Detection/blob/master/LICENSE)
